@@ -188,7 +188,7 @@ public final class Sistema extends javax.swing.JFrame {
 
         btnUsuarios.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnUsuarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/juan/estevez/sistemaventa/img/lupa.png"))); // NOI18N
-        btnUsuarios.setText("Usuarios");
+        btnUsuarios.setText("Contactos");
         btnUsuarios.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnUsuariosActionPerformed(evt);
