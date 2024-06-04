@@ -14,7 +14,7 @@ public class ClienteArbol {
     private String nombre;
     private String telefono;
     private String direccion;
-    private String razonSocial;
+    private String gmail;
     private String arbol;
 
     public String getArbol() {
@@ -41,8 +41,8 @@ public class ClienteArbol {
         this.direccion = direccion;
     }
 
-    public void setRazonSocial(String razonSocial) {
-        this.razonSocial = razonSocial;
+    public void setGmail(String gmail) {
+        this.gmail = gmail;
     }
 
     
@@ -51,14 +51,14 @@ public class ClienteArbol {
         this.nombre = null;
         this.telefono = null;
         this.direccion = null;
-        this.razonSocial = null;
+        this.gmail = null;
     }
-    public ClienteArbol(int clave, String nombre, String telefono, String direccion, String razonSocial) {
+    public ClienteArbol(int clave, String nombre, String telefono, String direccion, String gmail) {
         this.clave = clave;
         this.nombre = nombre;
         this.telefono = telefono;
         this.direccion = direccion;
-        this.razonSocial = razonSocial;
+        this.gmail = gmail;
     }
 
     public int getClave() {
@@ -77,14 +77,14 @@ public class ClienteArbol {
         return direccion;
     }
 
-    public String getRazonSocial() {
-        return razonSocial;
+    public String getGmail() {
+        return gmail;
     }
 
     @Override
     public String toString() {
         return "Cliente [clave=" + clave + ", nombre=" + nombre + ", telefono=" + telefono + 
-               ", direccion=" + direccion + ", razonSocial=" + razonSocial + "]";
+               ", direccion=" + direccion + ", razonSocial=" + gmail + "]";
     }
 }
 

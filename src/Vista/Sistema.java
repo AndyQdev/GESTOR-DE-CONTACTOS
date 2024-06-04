@@ -69,7 +69,7 @@ public final class Sistema extends javax.swing.JFrame {
             objeto[1] = listarClientes.get(i).getNombre();
             objeto[2] = listarClientes.get(i).getTelefono();
             objeto[3] = listarClientes.get(i).getDireccion();
-            objeto[4] = listarClientes.get(i).getRazonSocial();
+            objeto[4] = listarClientes.get(i).getGmail();
 
             modelo.addRow(objeto);
         }
@@ -86,7 +86,7 @@ public final class Sistema extends javax.swing.JFrame {
             objeto[1] = listarClientes.get(i).getNombre();
             objeto[2] = listarClientes.get(i).getTelefono();
             objeto[3] = listarClientes.get(i).getDireccion();
-            objeto[4] = listarClientes.get(i).getRazonSocial();
+            objeto[4] = listarClientes.get(i).getGmail();
 
             modelo.addRow(objeto);
         }
@@ -103,7 +103,7 @@ public final class Sistema extends javax.swing.JFrame {
             objeto[1] = listarClientes.get(i).getNombre();
             objeto[2] = listarClientes.get(i).getTelefono();
             objeto[3] = listarClientes.get(i).getDireccion();
-            objeto[4] = listarClientes.get(i).getRazonSocial();
+            objeto[4] = listarClientes.get(i).getGmail();
 
             modelo.addRow(objeto);
         }
@@ -131,7 +131,7 @@ public final class Sistema extends javax.swing.JFrame {
             objeto[1] = ListarContatos.get(i).getNombre();
             objeto[2] = ListarContatos.get(i).getTelefono();
             objeto[3] = ListarContatos.get(i).getDireccion();
-            objeto[4] = ListarContatos.get(i).getRazonSocial();
+            objeto[4] = ListarContatos.get(i).getGmail();
             objeto[5] = ListarContatos.get(i).getArbol();
                 modelo.addRow(objeto);
 
@@ -617,7 +617,7 @@ public final class Sistema extends javax.swing.JFrame {
                 cliente.setNombre(txtNombreCliente.getText());
                 cliente.setDireccion(txtDireccionCliente.getText());
                 cliente.setTelefono(txtTelefonoCliente.getText());
-                cliente.setRazonSocial(txtRazonSocialCliente.getText());
+                cliente.setGmail(txtRazonSocialCliente.getText());
                 String itemDeLista = (String) CBlistaDeArbol.getSelectedItem();
 
                 switch (itemDeLista) {
@@ -740,7 +740,7 @@ public final class Sistema extends javax.swing.JFrame {
             cliente.setNombre(txtNombreCliente.getText());
             cliente.setDireccion(txtDireccionCliente.getText());
             cliente.setTelefono(txtTelefonoCliente.getText());
-            cliente.setRazonSocial(txtRazonSocialCliente.getText());
+            cliente.setGmail(txtRazonSocialCliente.getText());
             String itemDeLista = (String) CBlistaDeArbol.getSelectedItem();
 
             switch (itemDeLista) {
