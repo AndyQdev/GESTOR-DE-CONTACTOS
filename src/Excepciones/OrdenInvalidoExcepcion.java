@@ -6,7 +6,7 @@ package Excepciones;
 
 /**
  *
- * @author RodrigoRivero
+ * @author CLAUDIA CORTEZ
  */
 public class OrdenInvalidoExcepcion extends Exception{
     public OrdenInvalidoExcepcion(){

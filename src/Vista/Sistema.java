@@ -35,9 +35,6 @@ public final class Sistema extends javax.swing.JFrame {
     int idAVL = 0;
     int idB = 0;
     int idFila;
-    int idFilaAMV;
-    int idFilaAVL;
-    int idFilaB;
 
     /**
      * Creates new form Sistema
@@ -638,13 +635,13 @@ public final class Sistema extends javax.swing.JFrame {
                         break;
 
                     case "AMV":
-                        arbolMVias.editarClienteAMV(idFilaAMV, cliente);
+                        arbolMVias.editarClienteAMV(idFila, cliente);
                         this.limpiarTabla();
                         this.limpiarCliente();
                         this.listarClientesAMV();
                         break;
                     case "AB":
-                        arbolMVias.editarClienteAMV(idFilaAMV, cliente);
+                        arbolMVias.editarClienteAMV(idFila, cliente);
                         this.limpiarTabla();
                         this.limpiarCliente();
                         this.listarClientesAMV();
@@ -693,7 +690,6 @@ public final class Sistema extends javax.swing.JFrame {
      */
     private void btnClientes1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClientes1ActionPerformed
         this.limpiarTabla();
-//        this.listarClientes();
         this.btnClientes1.setBackground(new Color(122, 163, 177));
         this.limpiarEstilosBotones(this.btnUsuarios);
         TabbedPane.setSelectedIndex(1);
@@ -725,9 +721,6 @@ public final class Sistema extends javax.swing.JFrame {
 
         int fila = tableClientes1.rowAtPoint(evt.getPoint());
         idFila = Integer.parseInt(tableClientes1.getValueAt(fila, 0).toString());
-        idFilaAMV = Integer.parseInt(tableClientes1.getValueAt(fila, 0).toString());
-        idFilaAVL = Integer.parseInt(tableClientes1.getValueAt(fila, 0).toString());
-        idFilaB = Integer.parseInt(tableClientes1.getValueAt(fila, 0).toString());
 
         txtNombreCliente.setText(tableClientes1.getValueAt(fila, 1).toString());
         txtTelefonoCliente.setText(tableClientes1.getValueAt(fila, 2).toString());
@@ -740,12 +733,10 @@ public final class Sistema extends javax.swing.JFrame {
         // TODO add your handling code here:
         if ("".equals(txtDireccionCliente.getText())
                 || "".equals(txtNombreCliente.getText())
-                //|| "".equals(txtDniRutCliente.getText())
                 || "".equals(txtTelefonoCliente.getText())) {
             JOptionPane.showMessageDialog(null, "Algunos campos están vacíos");
         } else {
             ClienteArbol cliente = new ClienteArbol();
-            //cliente.setClave(txtDniRutCliente.getText());
             cliente.setNombre(txtNombreCliente.getText());
             cliente.setDireccion(txtDireccionCliente.getText());
             cliente.setTelefono(txtTelefonoCliente.getText());
@@ -790,40 +781,7 @@ public final class Sistema extends javax.swing.JFrame {
                     this.limpiarCliente();
                     break;
             }
-//            switch (itemDeLista) {
-//                case "ABB":
-//                    id++;
-//                    cliente.setClave(id);
-//                    arbolBinario.insertar(id, cliente);
-//                    this.limpiarTabla();
-//                    this.listarClientesABB();
-//                    this.limpiarCliente();
-//                    break;
-//                case "AVL":
-//                    idAVL++;
-//                    cliente.setClave(idAVL);
-//                    arbolAVL.insertar(idAVL, cliente);
-//                    this.limpiarTabla();
-//                    this.listarClientesAVL();
-//                    this.limpiarCliente();
-//                    break;
-//                case "AMV":
-//                    idMV++;
-//                    cliente.setClave(idMV);
-//                    arbolMVias.insertar(idMV, cliente);
-//                    this.limpiarTabla();
-//                    this.listarClientesAMV();
-//                    this.limpiarCliente();
-//                    break;
-//                case "AB":
-//                    idB++;
-//                    cliente.setClave(idB);
-//                    arbolMVias.insertar(idB, cliente);
-//                    this.limpiarTabla();
-//                    // this.listarClientesAB();
-//                    this.limpiarCliente();
-//                    break;
-//            }
+
             JOptionPane.showMessageDialog(null, "Cliente Registrado");
         }
     }//GEN-LAST:event_btnGuardarCliente1ActionPerformed
@@ -836,11 +794,7 @@ public final class Sistema extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
+      
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {

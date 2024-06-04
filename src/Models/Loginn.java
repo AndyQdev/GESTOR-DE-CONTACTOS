@@ -4,7 +4,7 @@ import lombok.Data;
 
 /**
  *
- * @author Juan Carlos Estevez Vargas
+ * @author CLAUDIA CORTEZ
  */
 @Data
 public class Loginn {

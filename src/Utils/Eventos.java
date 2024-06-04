@@ -5,7 +5,7 @@ import javax.swing.JTextField;
 
 /**
  *
- * @author Juan Carlos Estevez Vargas
+ * @author CLAUDIA CORTEZ
  */
 public class Eventos {
 

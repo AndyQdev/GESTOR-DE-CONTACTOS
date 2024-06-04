@@ -202,19 +202,4 @@ public class ArbolAVL<K extends Comparable<K>, V> extends ArbolBinarioBusqueda<K
         }
         return false;
     }
-    public static void main(String[] args){
-        ArbolAVL<Integer, String> avl = new ArbolAVL();
-        avl.insertar(50, "Rodrigo");
-        avl.insertar(30, "rojo");
-        avl.insertar(90, "azul");
-        avl.insertar(10, "amarillo");
-        avl.insertar(75, "verde");
-        avl.insertar(80, "cafe");
-        avl.insertar(95, "asasa");
-        System.out.println("PreOrden: "+avl.recorridoEnPreOrden());
-        System.out.println("Elimino el 10: "+avl.eliminar(10));
-        System.out.println("PreOrden: "+avl.recorridoEnPreOrden());
-        avl.insertar(10, "amarillo");
-        System.out.println("PreOrden: "+avl.recorridoEnPreOrden());
-    }
 }
